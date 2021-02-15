@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1d1ec100cfb4aa8b5805210f1ba5ec2 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_d1d1ec100cfb4aa8b5805210f1ba5ec2" ></div>
+        
+</body>
+<script>    
+    
+            var map_d1d1ec100cfb4aa8b5805210f1ba5ec2 = L.map(
+                "map_d1d1ec100cfb4aa8b5805210f1ba5ec2",
+                {
+                    center: [49.83826, 24.02324],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2688a6322c01461586262e8090e59d24 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var tile_layer_3190cf22009c47b1924fc046bf67b442 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var tile_layer_fcd0c9f3677947dabc7054c1109ed9e1 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var feature_group_20ca109aa8264c87b3a5e26ea06af6e7 = L.featureGroup(
+                {}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var marker_fd3bb087a0d3420889f3d47d24061208 = L.marker(
+                [49.83826, 24.02324],
+                {}
+            ).addTo(feature_group_20ca109aa8264c87b3a5e26ea06af6e7);
+        
+    
+            var icon_327b5eb16b06473cb7d4621e87522592 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "user", "iconColor": "white", "markerColor": "pink", "prefix": "glyphicon"}
+            );
+            marker_fd3bb087a0d3420889f3d47d24061208.setIcon(icon_327b5eb16b06473cb7d4621e87522592);
+        
+    
+        var popup_88a6ae060fe04fa9b893155be3e806d7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_958a815920144e80b52b962de16c6cba = $(`<div id="html_958a815920144e80b52b962de16c6cba" style="width: 100.0%; height: 100.0%;">Your Location</div>`)[0];
+            popup_88a6ae060fe04fa9b893155be3e806d7.setContent(html_958a815920144e80b52b962de16c6cba);
+        
+
+        marker_fd3bb087a0d3420889f3d47d24061208.bindPopup(popup_88a6ae060fe04fa9b893155be3e806d7)
+        ;
+
+        
+    
+    
+            var feature_group_180d83b17d7c475a845af9b0fad34976 = L.featureGroup(
+                {}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var marker_ec6d599ee92c4398b4e6064fcb2d79f2 = L.marker(
+                [51.5073219, -0.1276474],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_df972169ba1d4195b43e055f195312c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "cadetblue", "prefix": "glyphicon"}
+            );
+            marker_ec6d599ee92c4398b4e6064fcb2d79f2.setIcon(icon_df972169ba1d4195b43e055f195312c8);
+        
+    
+        var popup_be04fc742820494f82c7fead427427fe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6763e5313f0a4dd8acda9390c49312d9 = $(`<div id="html_6763e5313f0a4dd8acda9390c49312d9" style="width: 100.0%; height: 100.0%;">Byte Me TV</div>`)[0];
+            popup_be04fc742820494f82c7fead427427fe.setContent(html_6763e5313f0a4dd8acda9390c49312d9);
+        
+
+        marker_ec6d599ee92c4398b4e6064fcb2d79f2.bindPopup(popup_be04fc742820494f82c7fead427427fe)
+        ;
+
+        
+    
+    
+            var marker_55b6a6d0ca0a4c778bfaf1fe755c95d7 = L.marker(
+                [34.6401861, 39.0494106],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_174727ad19ef461e85ac3da34343ecf6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_55b6a6d0ca0a4c778bfaf1fe755c95d7.setIcon(icon_174727ad19ef461e85ac3da34343ecf6);
+        
+    
+        var popup_7f6b7c4563cb4b15a65b9087c4a6a0cd = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a3fe2601cf144d0ca0d3695b9f70e755 = $(`<div id="html_a3fe2601cf144d0ca0d3695b9f70e755" style="width: 100.0%; height: 100.0%;">Ameer al shuaraa</div>`)[0];
+            popup_7f6b7c4563cb4b15a65b9087c4a6a0cd.setContent(html_a3fe2601cf144d0ca0d3695b9f70e755);
+        
+
+        marker_55b6a6d0ca0a4c778bfaf1fe755c95d7.bindPopup(popup_7f6b7c4563cb4b15a65b9087c4a6a0cd)
+        ;
+
+        
+    
+    
+            var marker_08c284f85baa43c0ab8b98e0a1263774 = L.marker(
+                [31.1667049, 36.941628],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_880eadac17334e81b0b759b4dfd9fb85 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_08c284f85baa43c0ab8b98e0a1263774.setIcon(icon_880eadac17334e81b0b759b4dfd9fb85);
+        
+    
+        var popup_a9fe1cac83ef4039b0a1276e1f13d662 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_da0bc1e8911045d896ddaaaf18549a90 = $(`<div id="html_da0bc1e8911045d896ddaaaf18549a90" style="width: 100.0%; height: 100.0%;">Ameer al shuaraa</div>`)[0];
+            popup_a9fe1cac83ef4039b0a1276e1f13d662.setContent(html_da0bc1e8911045d896ddaaaf18549a90);
+        
+
+        marker_08c284f85baa43c0ab8b98e0a1263774.bindPopup(popup_a9fe1cac83ef4039b0a1276e1f13d662)
+        ;
+
+        
+    
+    
+            var marker_f8af108bfa464d5abd47aeb3f26f2c2e = L.marker(
+                [26.2540493, 29.2675469],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_1eff5f70adac401eb714f8c1c4a28536 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "lightred", "prefix": "glyphicon"}
+            );
+            marker_f8af108bfa464d5abd47aeb3f26f2c2e.setIcon(icon_1eff5f70adac401eb714f8c1c4a28536);
+        
+    
+        var popup_ebf2296f235849bc82cce531ba8643ab = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d2080e7fe09e4c7c89971bc7805a7ef9 = $(`<div id="html_d2080e7fe09e4c7c89971bc7805a7ef9" style="width: 100.0%; height: 100.0%;">Ameer al shuaraa</div>`)[0];
+            popup_ebf2296f235849bc82cce531ba8643ab.setContent(html_d2080e7fe09e4c7c89971bc7805a7ef9);
+        
+
+        marker_f8af108bfa464d5abd47aeb3f26f2c2e.bindPopup(popup_ebf2296f235849bc82cce531ba8643ab)
+        ;
+
+        
+    
+    
+            var marker_62046734326e4ddc817e1b7e72b055b7 = L.marker(
+                [25.6242618, 42.3528328],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_9eb03264ac674ed59cb373b7c3bdd551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_62046734326e4ddc817e1b7e72b055b7.setIcon(icon_9eb03264ac674ed59cb373b7c3bdd551);
+        
+    
+        var popup_6faf1f8a58a34ba79f27fd4bf4c9137d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d35f398e822b4d2888c4c65b495a2647 = $(`<div id="html_d35f398e822b4d2888c4c65b495a2647" style="width: 100.0%; height: 100.0%;">Ameer al shuaraa</div>`)[0];
+            popup_6faf1f8a58a34ba79f27fd4bf4c9137d.setContent(html_d35f398e822b4d2888c4c65b495a2647);
+        
+
+        marker_62046734326e4ddc817e1b7e72b055b7.bindPopup(popup_6faf1f8a58a34ba79f27fd4bf4c9137d)
+        ;
+
+        
+    
+    
+            var marker_4328f10b23e24b40b1fe2f2a8ddee7ae = L.marker(
+                [33.7680065, 66.2385139],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_a5c9ba76482a40dd95d2add88493b792 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "darkpurple", "prefix": "glyphicon"}
+            );
+            marker_4328f10b23e24b40b1fe2f2a8ddee7ae.setIcon(icon_a5c9ba76482a40dd95d2add88493b792);
+        
+    
+        var popup_ebe5dad16f8d4aab9eeeaa927c2cde6f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7df5a74540c94aeca121b7dfb9e9b6d9 = $(`<div id="html_7df5a74540c94aeca121b7dfb9e9b6d9" style="width: 100.0%; height: 100.0%;">6 Days in Afghanista</div>`)[0];
+            popup_ebe5dad16f8d4aab9eeeaa927c2cde6f.setContent(html_7df5a74540c94aeca121b7dfb9e9b6d9);
+        
+
+        marker_4328f10b23e24b40b1fe2f2a8ddee7ae.bindPopup(popup_ebe5dad16f8d4aab9eeeaa927c2cde6f)
+        ;
+
+        
+    
+    
+            var marker_be2d67df379e483fa96aa820fc775ec7 = L.marker(
+                [40.7896239, -73.9598939],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_68d113a6a4e442d3b0dae4b3619d625b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_be2d67df379e483fa96aa820fc775ec7.setIcon(icon_68d113a6a4e442d3b0dae4b3619d625b);
+        
+    
+        var popup_a584f5279b7e4fe79961b40351760280 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_98968d4e17c340a090894b1d8c339767 = $(`<div id="html_98968d4e17c340a090894b1d8c339767" style="width: 100.0%; height: 100.0%;">Cash Cab: After Dark</div>`)[0];
+            popup_a584f5279b7e4fe79961b40351760280.setContent(html_98968d4e17c340a090894b1d8c339767);
+        
+
+        marker_be2d67df379e483fa96aa820fc775ec7.bindPopup(popup_a584f5279b7e4fe79961b40351760280)
+        ;
+
+        
+    
+    
+            var marker_308d58137dee411eac46695f7d5f5c01 = L.marker(
+                [29.4270504, -98.43750706398404],
+                {}
+            ).addTo(feature_group_180d83b17d7c475a845af9b0fad34976);
+        
+    
+            var icon_f1d3f333586c495fba2c0357f51dfc46 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "darkred", "prefix": "glyphicon"}
+            );
+            marker_308d58137dee411eac46695f7d5f5c01.setIcon(icon_f1d3f333586c495fba2c0357f51dfc46);
+        
+    
+        var popup_8f60cbb3096942288ca64d8e7aa96ceb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7a457d813def491c881d2b72b751af7f = $(`<div id="html_7a457d813def491c881d2b72b751af7f" style="width: 100.0%; height: 100.0%;">The 2007 NBA Finals</div>`)[0];
+            popup_8f60cbb3096942288ca64d8e7aa96ceb.setContent(html_7a457d813def491c881d2b72b751af7f);
+        
+
+        marker_308d58137dee411eac46695f7d5f5c01.bindPopup(popup_8f60cbb3096942288ca64d8e7aa96ceb)
+        ;
+
+        
+    
+    
+            var feature_group_3fb8962ea3cc4ba282ae2a8dcaf0e3f1 = L.featureGroup(
+                {}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+        
+    
+            var marker_2b18593ab5a94759b582b3e29a6d18fc = L.marker(
+                [48.5285448649131, 25.0391746576719],
+                {}
+            ).addTo(feature_group_3fb8962ea3cc4ba282ae2a8dcaf0e3f1);
+        
+    
+            var icon_1232db1e83004b0e8deb52f630aee775 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "heart", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_2b18593ab5a94759b582b3e29a6d18fc.setIcon(icon_1232db1e83004b0e8deb52f630aee775);
+        
+    
+        var popup_69c7dd1cde3242d390405a6d16984a51 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6572b41308a84dbd830772cb0c529468 = $(`<div id="html_6572b41308a84dbd830772cb0c529468" style="width: 100.0%; height: 100.0%;">Kolomyiska Pisanka</div>`)[0];
+            popup_69c7dd1cde3242d390405a6d16984a51.setContent(html_6572b41308a84dbd830772cb0c529468);
+        
+
+        marker_2b18593ab5a94759b582b3e29a6d18fc.bindPopup(popup_69c7dd1cde3242d390405a6d16984a51)
+        ;
+
+        
+    
+    
+            var layer_control_3dad48289389444d855e193dcede3702 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_2688a6322c01461586262e8090e59d24,
+                    "cartodbdark_matter" : tile_layer_3190cf22009c47b1924fc046bf67b442,
+                    "stamentoner" : tile_layer_fcd0c9f3677947dabc7054c1109ed9e1,
+                },
+                overlays :  {
+                    "Your Location" : feature_group_20ca109aa8264c87b3a5e26ea06af6e7,
+                    "Film Names" : feature_group_180d83b17d7c475a845af9b0fad34976,
+                    "Kolomyiska Pisanka" : feature_group_3fb8962ea3cc4ba282ae2a8dcaf0e3f1,
+                },
+            };
+            L.control.layers(
+                layer_control_3dad48289389444d855e193dcede3702.base_layers,
+                layer_control_3dad48289389444d855e193dcede3702.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_d1d1ec100cfb4aa8b5805210f1ba5ec2);
+            tile_layer_3190cf22009c47b1924fc046bf67b442.remove();
+            tile_layer_fcd0c9f3677947dabc7054c1109ed9e1.remove();
+        
+</script>
