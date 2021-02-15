@@ -24,8 +24,9 @@ geolocator = Nominatim(user_agent="vihtoriaaa", scheme='http')
 def read_data(file_path):
     """
     str -> list
-    this function reads the information from the csv file and returns the
-    it as DataFrame. if path is not str the function returns None
+    this function reads the information from file_path and returns list of
+    lists with data(film name, year, location). if path is not str the
+    function returns None
     >>> read_data([])
 
     """
